@@ -17,6 +17,14 @@
         print '">';
         print '<a href="form.php">Form</a>';
         print '</li>';
+        
+        print '<li class="';
+        if ($path_parts['filename'] == "aboutus") {
+            print ' activePage ';
+        }
+        print '">';
+        print '<a href="aboutus.php">About Us</a>';
+        print '</li>';
         ?>
     </ol>
 </nav>
