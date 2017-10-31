@@ -1,7 +1,7 @@
 <!-- ######################     Start Page header   ############################## -->
 
 <header>
-    <h1>Climate Change</h1>
+    <h1>Ruff Rescue</h1>
 </header>
 
 <!-- ######################     End Page header   ############################## -->
