@@ -50,10 +50,10 @@ $emailERROR = false;
 $errorMsg = array();
 
 // array used to hold form values that will be written to a CSV files
-
+$dataRecord = array();
 
 // have we mailed the information to the user?
-
+$mailed = false;
 
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 //
@@ -81,8 +81,7 @@ if(!securityCheck($thisURL)){
 
 
     $email = filter_var($_POST["txtEmail"], FILTER_SANITIZE_EMAIL);
-
-
+    $dataRecord[] = $email;
 
     //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     //
@@ -120,31 +119,32 @@ if(!securityCheck($thisURL)){
     //
     if(!$errorMsg){
         if($debug)
-            print '<p>Form is valid</p>';
+            print PHP_EOL . '<p>Form is valid</P>';
     
 
+        
     //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     // SECTION: 2e Save Data
     //
     // This block saves the data to a CSV files
 
+    $myFolder = 'data/';
 
+    $myFileName = 'registration';
 
+    $fileExt = '.csv';
 
-
-
-
-
-
+    $filename = $myFolder . $myFileName . $fileExt;
+    if ($debug) print PHP_EOL . '<p>filename is ' . $filename;
 
     // now we just open the file for append
-
+    $file = fopen($filename, 'a');
 
     // write the forms informations
-
+    fputcsv($file, $dataRecord);
 
     // close the files
-
+    fclose($file);
 
 
     //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -153,43 +153,42 @@ if(!securityCheck($thisURL)){
     //
     // build a message to display on the screen in section 3a and to mail
     // to the person filling out the form (section 2g).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    $message = '<h2>Your information.</h2>';
+    
+    foreach ($_POST as $htmlName => $value){
+        
+        $message .= '<p>';
+        // breaks up the form names into words. for example
+        // txtFirstName become First Name
+        $camelCase = preg_split('/(?=[A-Z])/', substr($htmlName, 3));
+        
+        foreach ($camelCase as $oneWord){
+            $message .= $oneWord . ' ';
+        }
+    
+        $message .= ' = ' . htmlentities($value, ENT_QUOTES, "UTF-8") . '</p>';
+        
+    }
+    
     //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     //
     // SECTION: 2g Mail to user
     //
     // Process for mailing a message which contains the forms data
     // the message was built in section 2f.
+    $to = $email; // the person who filled out the form
+    $cc = '';
+    $bcc = '';
 
+    $from = 'Christopher Suitor <csuitor@uvm.edu>';
 
-
-
-
-
-
-
-
-
-
-
-    } // end form is valid
+    // subject of mail should make sense to your form
+    $subject = 'Changing Earth: ';
+    
+    $mailed = sendMail($to, $cc, $bcc, $from, $subject, $message);
+    
+    
+        } // end form is valid
 
 }   //ends if form was submitted.
 
@@ -214,13 +213,13 @@ if(!securityCheck($thisURL)){
         
         print '<p>For your records a copy of this data has ';
     
-    
-
-    
+        if(!$mailed){
+            print "not";
+        }
         print 'been sent:</p>';
         print '<p>To: ' . $email . '</p>';
     
-    
+        print $message;
     }else{
     
         print '<h2> Register Today</h2>';
