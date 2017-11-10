@@ -33,7 +33,7 @@ include ('top.php');
 <article>
     <figure>
         <img  class="" alt="" src="images/sad9.jpg">
-        <figcaption> </figcaption>
+        <figcaption> Gunner </figcaption>
     </figure>
     
     <p>
