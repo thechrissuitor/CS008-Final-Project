@@ -28,9 +28,31 @@ $thisURL = $domain . $phpSelf;
 // Initialize variable one for each form element
 // in the order they appear on the form
 
+$firstName = "";
 
+$lastName = "";
 
 $email = "csuitor@uvm.edu";
+
+$breed = "None";
+
+$interest = "Interested";
+
+$styleApprov = false; //not checked
+
+$infoApprov = false; //not checked
+
+$layoutApprov = false; //not checked
+
+$styleDisapprov = false; //not checked
+
+$infoDisapprov = false; //not checked
+
+$layoutDisapprov = false; //not checked
+
+$social = "";
+
+$comments = "";
 
 //%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%
 //
@@ -38,9 +60,25 @@ $email = "csuitor@uvm.edu";
 //
 // Initialize Error Flags for each form elment we validate
 // in the order they appear in section 1c.
+$firstNameERROR = false;
 
+$lastNameERROR = false;
 
 $emailERROR = false;
+
+$breedERROR = false;
+
+$interestERROR = false;
+
+$approvalERROR = false;
+$totalApprovalChecked = 0;
+
+$disapprovalERROR = false;
+$totalDisapprovalChecked = 0;
+
+$socialERROR = false;
+
+$commentsERROR = false;
 
 //%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%
 //
@@ -71,17 +109,83 @@ if(!securityCheck($thisURL)){
     die($msg);
 }
 
+
     //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     //
     // SECTION: 2b Sanitize (clean) data
     // remove any potential JavaScript or html code from user's input on the
     // form. Note it is best to follow that same order as declared in section 1c.
 
-
-
+    $firstName = htmlentities($_POST["txtFirstName"], ENT_QUOTES, "UTF-8");
+    $dataRecord[] = $firstName;
+    
+    $lastName = htmlentities($_POST["txtLastName"], ENT_QUOTES, "UTF-8");
+    $dataRecord[] = $lastName;
 
     $email = filter_var($_POST["txtEmail"], FILTER_SANITIZE_EMAIL);
     $dataRecord[] = $email;
+    
+    $breed = htmlentities($_POST["lstBreed"], ENT_QUOTES, "UTF-8");
+    $dataRecord[] = $breed;
+    
+    $interest = filter_var($_POST["radInterest"], FILTER_SANITIZE_EMAIL);
+    $dataRecord[] = $interest;
+    
+    if(isset($_POST["chkStyleApprov"])) {
+        $styleApprov = true;
+        $totalApprovalChecked++;
+    } else {
+        $styleApprov = false;
+    }
+    $dataRecord[] = $styleApprov;
+    
+    if(isset($_POST["chkInfoApprov"])) {
+        $infoApprov = true;
+        $totalApprovalChecked++;
+    } else {
+        $infoApprov = false;
+    }
+    $dataRecord[] = $infoApprov;
+    
+    if(isset($_POST["chkLayoutApprov"])) {
+        $layoutApprov = true;
+        $totalApprovalChecked++;
+    } else {
+        $layoutApprov = false;
+    }
+    $dataRecord[] = $layoutApprov;
+    
+    if(isset($_POST["chkStyleDisapprov"])) {
+        $styleDisapprov = true;
+        $totalDisapprovalChecked++;
+    } else {
+        $styleDisapprov = false;
+    }
+    $dataRecord[] = $styleDisapprov;
+    
+    if(isset($_POST["chkInfoDisapprov"])) {
+        $infoDisapprov = true;
+        $totalDisapprovalChecked++;
+    } else {
+        $infoDisapprov = false;
+    }
+    $dataRecord[] = $infoDisapprov;
+    
+    if(isset($_POST["chkLayoutDisapprov"])) {
+        $layoutDisapprov = true;
+        $totalDisapprovalChecked++;
+    } else {
+        $layoutDisapprov = false;
+    }
+    $dataRecord[] = $layoutDisapprov;
+    
+    if($social!=""){
+        $social = filter_var($_POST["radSocial"], FILTER_SANITIZE_EMAIL);
+        $dataRecord[] = $social;
+    }
+    
+    $comments = htmlentities($_POST['txtComments'], ENT_QUOTES, "UTF-8");
+    $dataRecord[] = $comments;
 
     //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     //
@@ -93,14 +197,21 @@ if(!securityCheck($thisURL)){
     // order that the elements appear on your form so that the error messages
     // will be in the order they appear. errorMsg will be displayed on the form
     // see section 3b. The error flag ($emailERROR) will be used in section 3c.
-
-
-
-
-
-
-
-
+    if($firstName == ""){
+        $errorMsg[] = "Please enter your first name";
+        $firstNameERROR = true;
+    } elseif (!verifyAlphaNum($firstName)) {
+        $errorMsg[] = "Your first name appears to have extra charactrs.";
+        $firstNameERROR = true;
+    }
+    
+    if($lastName == ""){
+        $errorMsg[] = "Please enter your last name";
+        $lastNameERROR = true;
+    } elseif (!verifyAlphaNum($lastName)) {
+        $errorMsg[] = "Your last name appears to have extra characters.";
+        $lastNameERROR = true;
+    }
 
     if($email == ""){
         $errorMsg[] ='Please enter your email address';
@@ -108,6 +219,26 @@ if(!securityCheck($thisURL)){
     } elseif (!verifyEmail($email)) {
         $errorMsg[] = 'Your email address appears to be incorreect.';
         $emailERROR = true;
+    }
+    
+    if($breed == ''){
+        $errorMsg[] = "Please pick a value";
+        $breedERROR = true;
+    } elseif ($breed != 'None' AND $breed != 'Corgi' AND $breed != 'Chihuahua'
+            AND $breed != 'Dalmation' AND $breed != 'Doberman'
+            AND $breed != 'Great_Dane' AND $breed != 'Mastiff'
+            AND $breed != 'Pug' AND $breed != 'Retriever'
+            AND $breed != 'Other'){
+        $errorMsg[] = "Please pick a value";
+        $breedERROR = true;
+    }
+    
+    if($interest == ""){
+        $errorMsg[] = "Please select your opinion.";
+        $interestERROR = true;
+    } elseif (!verifyAlphaNum($interest)) {
+        $errorMsg[] = "It seems you have altered our buttons.";
+        $interestERROR = true;
     }
 
 
@@ -183,7 +314,7 @@ if(!securityCheck($thisURL)){
     $from = 'Christopher Suitor <csuitor@uvm.edu>';
 
     // subject of mail should make sense to your form
-    $subject = 'Changing Earth: ';
+    $subject = 'Dog Rescue: ';
     
     $mailed = sendMail($to, $cc, $bcc, $from, $subject, $message);
     
@@ -261,47 +392,257 @@ if(!securityCheck($thisURL)){
          */
     ?>
     
-    <form action="<?php print $phpSelf; ?>"
-          id="frmRegister"
+    <form action="<?php print $phpSelf; ?>" 
+          id="frmRegister" 
           method="post">
     
         <fieldset class="contact">
-            <legend>Contact Information</legend>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            <legend>Get Connected</legend>
+            <p>
+                <label class="required text-field" for="txtFirstName">First Name</label>
+                <input autofocus
+                       <?php if ($firstNameERROR) print 'class="mistake"'; ?>
+                       id="txtFirstName"
+                       maxlength="45"
+                       name="txtFirstName"
+                       onfocus="this.select()"
+                       placeholder="Enter your first name"
+                       tabindex="100"
+                       type="text"
+                       value="<?php print $firstName; ?>"
+                >
+            </p>
             
             <p>
-                <label class="required" for="txtEmail">Email</label>
+                <label class="required text-field" for="txtLastName">Last Name</label>
+                <input 
+                       <?php if ($lastNameERROR) print 'class="mistake"'; ?>
+                       id="txtLastName"
+                       maxlength="45"
+                       name="txtLastName"
+                       onfocus="this.select()"
+                       placeholder="Enter your last name"
+                       tabindex="120"
+                       type="text"
+                       value="<?php print $lastName; ?>"
+                >
+            </p>
+            
+            <p>
+                <label class ="required text-field" for="txtEmail">Email</label>
                     <input
-                            <?php if ($emailERROR) print 'class="mistake"'; ?>
+                        <?php if ($emailERROR) print 'class="mistake"'; ?>
                         id="txtEmail"
                         maxlength="45"
                         name="txtEmail"
                         onfocus="this.select()"
                         placeholder="Enter a valid email address"
-                        tabindex="120"
+                        tabindex="140"
                         type="text"
                         value="<?php print $email; ?>"
                     >
             </p>
+            
+            <br/>
+<!-- ##################### START LISTBOX ################### --> 
+            <p>
+                What kind of dog do you have?
+            </p>
+            
+            <p class="listbox <?php if ($breedERROR) print ' mistake'; ?>">
+                <select id="lstBreed" size="4"
+                        name="lstBreed"
+                        tabindex="160">
+                    <option <?php if($breed == "None") print " selected "; ?>
+                        value="None">None</option>
+                    
+                    <option <?php if($breed == "Corgi") print " selected "; ?>
+                        value="Corgi">Corgi</option>
+                    
+                    <option <?php if($breed == "Chihuahua") print " selected "; ?>
+                        value="Chihuahua">Chihuahua</option>
+                    
+                    <option <?php if($breed == "Dalmation") print " selected "; ?>
+                        value="Dalmation">Dalmation</option>
+                    
+                    <option <?php if($breed == "Doberman") print " selected "; ?>
+                        value="Doberman">Doberman</option>
+                    
+                    <option <?php if($breed == "Great_Dane") print " selected "; ?>
+                        value="Great_Dane">Great Dane</option>
+                    
+                    <option <?php if($breed == "Mastiff") print " selected "; ?>
+                        value="Mastiff">Mastiff</option>
+                    
+                    <option <?php if($breed == "Pug") print " selected "; ?>
+                        value="Pug">Pug</option>
+                    
+                    <option <?php if($breed == "Retriever") print " selected "; ?>
+                        value="Retriever">Retriever</option>
+                </select>
+            </p>
+            
+<!-- ##################### END LISTBOX ################### --> 
+<br/>
+<!-- ##################### START RADIO BUTTONS ################### --> 
+            <p class="radio <?php if ($interestERROR) print ' mistake'; ?>">Your opinion on dog rescue:<br/>
+                <label class="radio-field">
+                    <input type="radio"
+                           id="radInterest1"
+                           name="radInterest"
+                           value="Interested"
+                           tabindex="180"
+                           <?php if ($interest == 'Interested') echo ' checked="checked"'; ?>>
+                Interested</label>
+            </p>
+            
+            <p class="radio <?php if ($interestERROR) print ' mistake'; ?>">
+                <label class="radio-field">
+                    <input type="radio"
+                           id="radInterest2"
+                           name="radInterest"
+                           value="Slightly_Interested"
+                           tabindex="200"
+                           <?php if ($interest == "Slightly_Interested") echo ' checked="checked"'; ?>>
+                Slightly Interested</label>
+            </p>
+            
+            <p class="radio <?php if ($interestERROR) print ' mistake'; ?>">
+                <label class="radio-field">
+                    <input type="radio"
+                           id="radInterest3"
+                           name="radInterest"
+                           value="Not_Interested"
+                           tabindex="220"
+                           <?php if ($interest == "Not_Interested") echo ' checked="checked"'; ?>>
+                Not Interested</label>
+            </p>
+<!-- ##################### END RADIO BUTTONS ################### --> 
         </fieldset><!-- ends contact -->
+        
+        
+        
+        <fieldset>
+            <legend>Optional</legend>
+<!-- ##################### START CHECKBOXES ################### --> 
+            <p class="checkbox <?php if ($approvalERROR) print ' mistake'; ?>">
+                What did you like about our website?<br/>
+                <label class="check-field">
+                    <input <?php if ($styleApprov) print " checked "; ?>
+                        id="chkStyleApprov"
+                        name="chkStyleApprov"
+                        tabindex="240"
+                        type="checkbox"
+                        value="Style"> Style
+                </label>
+            </p>
+            
+            <p class="checkbox <?php if ($approvalERROR) print ' mistake'; ?>">
+                <label class="check-field">
+                    <input <?php if ($infoApprov) print " checked "; ?>
+                        id="chkInfoApprov"
+                        name="chkInfoApprov"
+                        tabindex="260"
+                        type="checkbox"
+                        value="Information"> Information
+                </label>
+            </p>
+            
+            <p class="checkbox <?php if ($approvalERROR) print ' mistake'; ?>">
+                <label class="check-field">
+                    <input <?php if ($layoutApprov) print " checked "; ?>
+                        id="chkLayoutApprov"
+                        name="chkLayoutApprov"
+                        tabindex="280"
+                        type="checkbox"
+                        value="Layout"> Layout
+                </label>
+            </p>
+            
+<!-- ##################### END CHECKBOXES ################### -->
+<br/>
+<!-- ##################### START CHECKBOXES ################### --> 
+            <p class="checkbox <?php if ($dispprovalERROR) print ' mistake'; ?>">
+                What could we improve?<br/>
+                <label class="check-field">
+                    <input <?php if ($styleDisapprov) print " checked "; ?>
+                        id="chkStyleDisapprov"
+                        name="chkStyleDisapprov"
+                        tabindex="300"
+                        type="checkbox"
+                        value="Style"> Style
+                </label>
+            </p>
+            
+            <p class="checkbox <?php if ($disapprovalERROR) print ' mistake'; ?>">
+                <label class="check-field">
+                    <input <?php if ($infoDisapprov) print " checked "; ?>
+                        id="chkInfoDisapprov"
+                        name="chkInfoDisapprov"
+                        tabindex="320"
+                        type="checkbox"
+                        value="Information"> Information
+                </label>
+            </p>
+            
+            <p class="checkbox <?php if ($disapprovalERROR) print ' mistake'; ?>">
+                <label class="check-field">
+                    <input <?php if ($layoutDisapprov) print " checked "; ?>
+                        id="chkLayoutDisapprov"
+                        name="chkLayoutDisapprov"
+                        tabindex="340"
+                        type="checkbox"
+                        value="Layout"> Layout
+                </label>
+            </p>
+            
+<!-- ##################### END CHECKBOXES ################### -->
+<br/>
+<!-- ##################### START RADIO BUTTONS ################### --> 
+            <p class="radio <?php if ($socialERROR) print ' mistake'; ?>">Did you add us on Linkedln and Facebook?<br/>
+                <label class="radio-field">
+                    <input type="radio"
+                           id="radSocial"
+                           name="radSocial"
+                           value="Yes"
+                           tabindex="360"
+                           <?php if ($social == 'Yes') echo ' checked="checked"'; ?>>
+                Yes</label>
+            </p>
+            
+            <p class="radio <?php if ($socialERROR) print ' mistake'; ?>">
+                <label class="radio-field">
+                    <input type="radio"
+                           id="radSocial"
+                           name="radSocial"
+                           value="No"
+                           tabindex="380"
+                           <?php if ($interest == "No") echo ' checked="checked"'; ?>>
+                No</label>
+            </p>
+<!-- ##################### END RADIO BUTTONS ################### --> 
+<br/>
+<!-- ##################### START TEXTAREA ################### -->
+            <p class ="textarea">
+                <label for="txtComments">Additional Comments:</label><br/>
+                <textarea <?php if ($commentsERROR) print 'class="mistake"'; ?>
+                    id="txtComments"
+                    name="txtComments"
+                    onfocus="this.select()"
+                    placeholder="Enter your comments..."
+                    tabindex="400"><?php print $comments; ?></textarea>
+            </p>
+<!-- ##################### END TEXTAREA ################### --> 
+
+
+<br/>
+
+        </fieldset>
         
         <fieldset class="buttons">
             <legend></legend>
-            <input class="button" id="btnSubmit" name="btnSubmit" tabindex="900" type="submit" value="Register" >
-        </fieldset>
+            <input class="button" id="btnSubmit" name="btnSubmit" tabindex="900" type="submit" value="Register">
+        </fieldset><!-- ends buttons -->       
     </form>
     
     <?php
