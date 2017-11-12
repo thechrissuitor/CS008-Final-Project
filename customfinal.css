@@ -1,42 +1,76 @@
+/*###################### START BACKGROUND STUFF #############################*/
+*{
+    font: 14pt Arial,Helvetica,sans-serif;
+}
+html{ /*this sets the background color and gradient */
+    background-color: #127DD0;
+    background: -webkit-linear-gradient(#127DD0, #FFC106); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#127DD0, #FFC106); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#127DD0, #FFC106); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#127DD0, #FFC106); /* Standard syntax */
+}
 body{
+    max-width: 80%;
     margin: auto;
+    background-color: white;
+    padding: .5em;
+    box-shadow: 10px 10px 5px #53525A;
 }
-article{
-    max-width: 85%;
-    margin: auto;
+/*###################### END BACKGROUND STUFF #############################*/
+
+/*###################### START NAVIGATION #############################*/
+nav{
+    margin-top: 0.2em;
+    margin-bottom: 1em;
+    text-align: center;
+    padding: 1px 0px 1px 0px;
 }
-.links{
-    background-color: #FFD865;
-    margin: 0.05em;
+nav ol{
+    padding: 0px 0px 3px 0px;
+    margin: 0em;
+    border-bottom: solid 1px #FFCD37;
 }
 nav ol li{
     display: inline-block;
-    padding:0.4em;
     font-family: "sans-serif", Times, serif;
-    font-size: 2.4em;
-    margin-top: 0.7em;    
+    font-size: 14pt;    
+    padding: 0em 2em 0em 2em;
+    text-align: center;
+    color: #FFC106;
+    background-color: #FFCD37;
+    margin: 0em 1px 0em 1px;
 }
-nav{
-    
-    margin-top: 0.2em;
-    margin-bottom: 0.2em;
-    border-bottom: solid 2px #FFD865;
+/*###################### END NAVIGATION #############################*/
+
+/*###################### START CSS FOR HEADER #############################*/
+
+header h1{
+    margin: auto;
+    margin-bottom: .3em;
+    text-align: center;
+    font-size: 3.5em;
+    padding: 0.4em 0em 0.4em 0em;
+    background-color: #0666B0;
+    color: #60A7DD;
 }
-nav ol{
-    margin: auto 0em 2em 20em;
-}
-    
-    header h1{
-        margin: auto;
-        text-align: center;
-        font-size: 3.5em;
-        padding: 0.4em 0em 0.4em 0em;
-        background-color: #127DD0;
-    }
-.dogPaw{
-    max-width: 6%;
+
+/*###################### END CSS FOR HEADER #############################*/
+
+/*###################### START HOME #############################*/
+.gunner{
     float: left;
+    text-align: center;
 }
+.duke{
+    float: right;
+    text-align: center;
+}
+.gunner_circle{
+    border-radius: 100px;
+}
+/*###################### END HOME #############################*/
+
+/*###################### START CSS FOR ABOUT US #############################*/
 
 .coders{
     max-width: 15%;
@@ -46,45 +80,26 @@ nav ol{
 figcaption{
     padding-left: 1.5em;
 }
+
+/*###################### END CSS FOR ABOUT US #############################*/
+
+/*###################### START CSS FOR FOOTER #############################*/
+
 footer ul{
     list-style-type: none 
 }
 footer{
-    column-count: 3;
+    text-align: center;
+    /*column-count: 3;*/
     border-top-style: solid;
+    padding: .5em;
+    /*column-rule-style: solid;*/
 }
-.aboutus{
-    max-width: 70%;
-    margin: auto
-}
-
-
-
-.menuicon{
-    float: left;
-    max-width: 3%;
-    cursor: pointer;
-    padding: 1em;
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    margin-top: 5em;
+#footer{
+    text-align: center;
+    padding: 10px;
+    width: 100%;
 }
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
+/*###################### END CSS FOR FOOTER #############################*/
 
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
