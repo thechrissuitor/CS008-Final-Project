@@ -144,17 +144,16 @@ header{
 /*###################### END CSS FOR HEADER #############################*/
 
 /*###################### START MEDIA QUERY STUFF ##########################*/
-
+@media screen and (max-width: 1920px){
+    .logo{
+        margin: auto 20em auto 26em;
+        max-width: 45%;
+    }
+}
 @media screen and (max-width: 1900px){
     .logo{
         margin: -6.9em 20em auto 20em;
         max-width: 50%;
-    }
-}
-@media screen and (max-width: 1920px){
-    .logo{
-        /* margin: auto 20em auto 26em; */
-        max-width: 45%;
     }
 }
 @media screen and (max-width: 620px){
@@ -270,8 +269,8 @@ footer{
     text-align: center;
     border-top: solid #CB3A00;
     border-bottom: solid #CB3A00;
-    color: #CB3A00;
-    background-color: #FF4D06;
+    color: #ffebcd;
+    background-color: #FF7E4A;
     padding: .5em;
 }
 #footer{
@@ -280,7 +279,7 @@ footer{
     width: 100%;
 }
 footer a{
-    color: #FF9165;
+    color: #ffebcd;
 }
 footer a:hover{
     color: #60A7DD;
