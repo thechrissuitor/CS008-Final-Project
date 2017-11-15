@@ -1,8 +1,8 @@
-/*###################### START BACKGROUND STUFF #############################*/
+/*############################## START BACKGROUND STUFF ###################### */
 *{
     font: 14pt Arial,Helvetica,sans-serif;
 }
-html{ /*this sets the background color and gradient */
+html{ /* This sets the background color and gradient */
     background-color: #127DD0;
     background: -webkit-linear-gradient(#127DD0, #FFC106); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#127DD0, #FFC106); /* For Opera 11.1 to 12.0 */
@@ -16,7 +16,7 @@ body{
     padding: .5em;
     box-shadow: 10px 10px 5px #53525A;
 }
-/*###################### END BACKGROUND STUFF #############################*/
+/*###########################   END BACKGROUND STUFF ##########################*/
 
 /*###################### START NAVIGATION #############################*/
 nav{
@@ -40,20 +40,22 @@ nav ol li{
     background-color: #FFCD37;
     margin: 0em 1px 0em 1px;
 }
+
 /*###################### END NAVIGATION #############################*/
 
 /*###################### START CSS FOR HEADER #############################*/
-
+ 
 header h1{
     margin: auto;
+    margin-top: -0.75em;
     margin-bottom: .3em;
     text-align: center;
     font-size: 3.5em;
     padding: 0.4em 0em 0.4em 0em;
     background-color: #0666B0;
     color: #60A7DD;
+    border-top-style: solid;
 }
-
 /*###################### END CSS FOR HEADER #############################*/
 
 /*###################### START HOME #############################*/
@@ -61,7 +63,7 @@ header h1{
     float: left;
     text-align: center;
 }
-.duke{
+.ollie{
     float: right;
     text-align: center;
 }
@@ -76,11 +78,17 @@ header h1{
     max-width: 15%;
     border-radius: 40%;
     text-align: center;
+    float: left;
 }
-figcaption{
+.abtfig{
     padding-left: 1.5em;
+    position: relative;
+    top:16em;
+    left: -10em;
 }
-
+.nn, .cts, .ke{
+    padding-left: 15em;
+}
 /*###################### END CSS FOR ABOUT US #############################*/
 
 /*###################### START CSS FOR FOOTER #############################*/
@@ -89,17 +97,132 @@ footer ul{
     list-style-type: none 
 }
 footer{
-    text-align: center;
     /*column-count: 3;*/
     border-top-style: solid;
-    padding: .5em;
-    /*column-rule-style: solid;*/
+    padding: .5em
 }
 #footer{
     text-align: center;
     padding: 10px;
     width: 100%;
 }
-
 /*###################### END CSS FOR FOOTER #############################*/
 
+
+.menuicon{
+    float: left;
+    cursor: pointer;
+    padding: 1.9em 1em .7em 1.5em;
+    border-right-style: solid;
+    border-right-color: #EE6F2D;
+    border-bottom-style: solid;
+    border-bottom-color: #EE6F2D;
+}
+.dropdown{
+    margin: auto;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 5em;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 0.4em;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navigation_icon{
+    float: left;
+    padding-left: 1.5em;
+    position: relative;
+    top: 5em;
+    left: -7.5em;
+   font-weight: bold;
+}
+
+.motor{
+    float: left;
+    position: relative;
+    top: 15.5em;
+    left: 9em;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.menufig{
+    padding-left: 1.5em;
+    float: left;
+    position: relative;
+    left: -8em;
+    top: 4em;
+    font-weight: bolder;
+    color: orange;
+    text-transform: uppercase;
+}
+
+td a{
+    text-decoration: none;
+}
+
+.dropdown-content a:hover{
+    zoom: 1.1;
+}
+.logo{
+    margin: auto 20em auto 26em;
+}
+header{
+    background-color: #0666B0;
+}
+
+@media screen and (max-width: 1900px){
+    .logo{
+        margin: -6.9em 20em auto 20em;
+        max-width: 50%;
+    }
+}
+@media screen and (max-width: 1024px){
+    .logo{
+        margin: -6.9em 20em auto 16em;
+        max-width: 45%;
+    }
+}
+@media screen and (max-width: 620px){
+    .logo{
+        margin: -6.77em 20em auto 10em;
+        max-width: 45%;
+    }
+}
+
+
+@media screen and (max-width: 350px){
+     header h1{
+        display: none;
+    }
+    .logo{
+        position: relative;
+        top: -9em;
+        left: -6em;
+        
+    }
+    .menuicon{
+        margin: 7em 0em 0em 3em;
+        border-top-style: solid;
+        border-top-color: #EE6F2D;
+        border-left-style: solid;
+        border-left-color: #EE6F2D;
+        
+        max-width: 35%;
+    }
+    
+}
