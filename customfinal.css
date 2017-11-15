@@ -1,8 +1,8 @@
-/*############################## START BACKGROUND STUFF ###################### */
+/*###################### START BACKGROUND STUFF #############################*/
 *{
     font: 14pt Arial,Helvetica,sans-serif;
 }
-html{ /* This sets the background color and gradient */
+html{ /*this sets the background color and gradient */
     background-color: #127DD0;
     background: -webkit-linear-gradient(#127DD0, #FFC106); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#127DD0, #FFC106); /* For Opera 11.1 to 12.0 */
@@ -16,7 +16,15 @@ body{
     padding: .5em;
     box-shadow: 10px 10px 5px #53525A;
 }
-/*###########################   END BACKGROUND STUFF ##########################*/
+
+h2{
+    color: #FF4D06;
+    text-align: center;
+    margin: 0em auto 1em auto;
+    text-decoration: underline;
+    font-size: 26pt;
+}
+/*###################### END BACKGROUND STUFF #############################*/
 
 /*###################### START NAVIGATION #############################*/
 nav{
@@ -40,11 +48,10 @@ nav ol li{
     background-color: #FFCD37;
     margin: 0em 1px 0em 1px;
 }
-
 /*###################### END NAVIGATION #############################*/
 
 /*###################### START CSS FOR HEADER #############################*/
- 
+
 header h1{
     margin: auto;
     margin-top: -0.75em;
@@ -54,69 +61,17 @@ header h1{
     padding: 0.4em 0em 0.4em 0em;
     background-color: #0666B0;
     color: #60A7DD;
-    border-top-style: solid;
+    border-top: solid;
 }
-/*###################### END CSS FOR HEADER #############################*/
 
-/*###################### START HOME #############################*/
-.gunner{
-    float: left;
-    text-align: center;
-}
-.ollie{
-    float: right;
-    text-align: center;
-}
-.gunner_circle{
-    border-radius: 100px;
-}
-/*###################### END HOME #############################*/
-
-/*###################### START CSS FOR ABOUT US #############################*/
-
-.coders{
-    max-width: 15%;
-    border-radius: 40%;
-    text-align: center;
-    float: left;
-}
-.abtfig{
-    padding-left: 1.5em;
-    position: relative;
-    top:16em;
-    left: -10em;
-}
-.nn, .cts, .ke{
-    padding-left: 15em;
-}
-/*###################### END CSS FOR ABOUT US #############################*/
-
-/*###################### START CSS FOR FOOTER #############################*/
-
-footer ul{
-    list-style-type: none 
-}
-footer{
-    /*column-count: 3;*/
-    border-top-style: solid;
-    padding: .5em
-}
-#footer{
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-}
-/*###################### END CSS FOR FOOTER #############################*/
-
-
+/* CSS for Dropdown Menu */
+/* Code inspired from w3schools */
 .menuicon{
     float: left;
     cursor: pointer;
     padding: 1.9em 1em .7em 1.5em;
-    border-right-style: solid;
-    border-right-color: #EE6F2D;
-    border-bottom-style: solid;
-    border-bottom-color: #EE6F2D;
+    border-right: solid #EE6F2D;
+    border-bottom: solid #EE6F2D;
 }
 .dropdown{
     margin: auto;
@@ -141,16 +96,16 @@ footer{
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
+ 
 .navigation_icon{
     float: left;
     padding-left: 1.5em;
     position: relative;
     top: 5em;
     left: -7.5em;
-   font-weight: bold;
+    font-weight: bold;
 }
-
+ 
 .motor{
     float: left;
     position: relative;
@@ -159,7 +114,7 @@ footer{
     font-size: xx-large;
     font-weight: bolder;
 }
-
+ 
 .menufig{
     padding-left: 1.5em;
     float: left;
@@ -170,20 +125,25 @@ footer{
     color: orange;
     text-transform: uppercase;
 }
-
+ 
 td a{
     text-decoration: none;
 }
-
-.dropdown-content a:hover{
-    zoom: 1.1;
-}
-.logo{
-    margin: auto 20em auto 26em;
-}
+ 
 header{
     background-color: #0666B0;
 }
+.logo{
+        margin: -6.9em 20em auto 23em;
+}
+.dropdown-content a:hover{
+    transform: scale(1.2);
+}
+/* end code for dropdown menu */
+
+/*###################### END CSS FOR HEADER #############################*/
+
+/*###################### START MEDIA QUERY STUFF ##########################*/
 
 @media screen and (max-width: 1900px){
     .logo{
@@ -191,9 +151,9 @@ header{
         max-width: 50%;
     }
 }
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1920px){
     .logo{
-        margin: -6.9em 20em auto 16em;
+        /* margin: auto 20em auto 26em; */
         max-width: 45%;
     }
 }
@@ -203,8 +163,6 @@ header{
         max-width: 45%;
     }
 }
-
-
 @media screen and (max-width: 350px){
      header h1{
         display: none;
@@ -213,7 +171,6 @@ header{
         position: relative;
         top: -9em;
         left: -6em;
-        
     }
     .menuicon{
         margin: 7em 0em 0em 3em;
@@ -221,8 +178,114 @@ header{
         border-top-color: #EE6F2D;
         border-left-style: solid;
         border-left-color: #EE6F2D;
-        
         max-width: 35%;
-    }
-    
+    }   
 }
+
+/*###################### END MEDIA QUERY STUFF ##########################*/
+
+/*###################### START HOME #############################*/
+.gunner{
+    float: left;
+    text-align: center;
+}
+.duke{
+    float: right;
+    text-align: center;
+}
+.gunner_circle{
+    border-radius: 100px;
+}
+/*###################### END HOME #############################*/
+
+/*###################### START CSS FOR PHOTOS #############################*/
+#photos table{
+    max-width: 70%;
+    margin: auto;
+}
+#photos figure{
+    border-radius: 25px;
+    border: 5px solid;
+    border-color: #FFC106;
+    text-align: center;
+    background-color: cornsilk;
+}
+#breeds-detail figure{
+    border-radius: 25px;
+    border: 5px solid;
+    border-color: #FFC106;
+    text-align: center;
+    margin: auto;
+    background-color: cornsilk;
+}
+#photos figcaption{
+    border-top: solid #CB3A00;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    color: #CB3A00;
+}
+#breeds-detail figcaption{
+    border-top: solid #CB3A00;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    font-size: 32pt;
+    color: #CB3A00;
+}
+#photos img{
+    padding: 1.5em;
+}
+#breeds-detail img{
+    padding: 1.5em;
+}
+#photos table{
+    margin: auto;
+}
+#breeds-detail table{
+    max-width: 70%;
+    margin: auto;
+}
+/*###################### END CSS FOR PHOTOS #############################*/
+
+/*###################### START CSS FOR ABOUT US #############################*/
+
+.coders{
+    max-width: 15%;
+    border-radius: 40%;
+    text-align: center;
+}
+figcaption{
+    padding-left: 1.5em;
+}
+
+/*###################### END CSS FOR ABOUT US #############################*/
+
+/*###################### START CSS FOR FOOTER #############################*/
+
+footer ul{
+    list-style-type: none 
+}
+footer{
+    text-align: center;
+    border-top: solid #CB3A00;
+    border-bottom: solid #CB3A00;
+    color: #CB3A00;
+    background-color: #FF4D06;
+    padding: .5em;
+}
+#footer{
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+footer a{
+    color: #FF9165;
+}
+footer a:hover{
+    color: #60A7DD;
+    background-color: #0666B0;
+}
+
+/*###################### END CSS FOR FOOTER #############################*/
+
