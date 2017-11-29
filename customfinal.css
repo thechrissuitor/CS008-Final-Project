@@ -4,9 +4,6 @@
 }
 html{ /*this sets the background color and gradient */
     background-color: #127DD0;
-    background: -webkit-linear-gradient(#127DD0, #FFC106); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#127DD0, #FFC106); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#127DD0, #FFC106); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#127DD0, #FFC106); /* Standard syntax */
 }
 body{
@@ -66,13 +63,7 @@ header h1{
 
 /* CSS for Dropdown Menu */
 /* Code inspired from w3schools */
-.menuicon{
-    float: left;
-    cursor: pointer;
-    padding: 1.9em 1em .7em 1.5em;
-    border-right: solid #EE6F2D;
-    border-bottom: solid #EE6F2D;
-}
+
 .dropdown{
     margin: auto;
 }
@@ -134,7 +125,7 @@ header{
     background-color: #0666B0;
 }
 .logo{
-        margin: -6.9em 20em auto 23em;
+        margin: auto 20em auto 27em;
 }
 .dropdown-content a:hover{
     transform: scale(1.2);
@@ -144,16 +135,47 @@ header{
 /*###################### END CSS FOR HEADER #############################*/
 
 /*###################### START MEDIA QUERY STUFF ##########################*/
-@media screen and (max-width: 1920px){
-    .logo{
-        margin: auto 20em auto 26em;
-        max-width: 45%;
-    }
-}
+
 @media screen and (max-width: 1900px){
     .logo{
         margin: -6.9em 20em auto 20em;
         max-width: 50%;
+    }
+}
+@media screen and (max-width: 1820px){
+    .logo{
+        margin: -6.9em 20em auto 13em;
+        max-width: 45%;
+    }
+}
+@media screen and (max-width: 1860px){
+    .logo{
+        margin: auto 20em auto 24em;
+        max-width: 45%;
+    }
+}
+@media screen and (max-width: 1440px){
+    .logo{
+        margin: auto 20em auto 19em;
+        max-width: 45%;
+    }
+}
+@media screen and (max-width: 1370px){
+    .logo{
+        margin: auto 20em auto 17em;
+        max-width: 45%;
+    }
+}
+@media screen and (max-width: 1280px){
+    .logo{
+        margin: -6.9em 20em auto 20em;
+        max-width: 45%;
+    }
+}
+@media screen and (max-width: 1024px){
+    .logo{
+        margin: -6.9em 20em auto 17em;
+        max-width: 45%;
     }
 }
 @media screen and (max-width: 620px){
@@ -180,7 +202,6 @@ header{
         max-width: 35%;
     }   
 }
-
 /*###################### END MEDIA QUERY STUFF ##########################*/
 
 /*###################### START HOME #############################*/
@@ -188,13 +209,38 @@ header{
     float: left;
     text-align: center;
 }
-.duke{
-    float: right;
-    text-align: center;
-}
 .gunner_circle{
     border-radius: 100px;
 }
+.ollie_circle{
+    border-radius: 100px;
+    
+}
+.ollie{
+    float: right;
+    text-align: center;
+}
+#info{
+    border-collapse: collapse;
+    margin: 1.2em;
+}
+#photos tbody img{
+    border-radius: 70%;
+}
+.simple td{
+    border-right: solid 2px #53525A;
+    text-align: center;
+    width: 500px;
+    
+}
+.smallround{
+    border-radius: 45%;
+}
+.smallround:hover{
+    transform: scale(1.2)
+}
+
+
 /*###################### END HOME #############################*/
 
 /*###################### START CSS FOR PHOTOS #############################*/
@@ -232,10 +278,10 @@ header{
     font-size: 32pt;
     color: #CB3A00;
 }
-#photos img{
+#photos table img{
     padding: 1.5em;
 }
-#breeds-detail img{
+#breeds-detail table img{
     padding: 1.5em;
 }
 #photos table{
@@ -245,19 +291,38 @@ header{
     max-width: 70%;
     margin: auto;
 }
+
+.dropdown #menuicon{
+    float: left;
+    cursor: pointer;
+    padding: 1.9em 1em .7em 1.5em;
+    border-right: solid #EE6F2D;
+    border-bottom: solid #EE6F2D;
+}
 /*###################### END CSS FOR PHOTOS #############################*/
 
 /*###################### START CSS FOR ABOUT US #############################*/
-
+.jon, .chris, .nnk{
+    float: left;
+    border-radius: 45%;
+    margin-right: 0.8em;
+}
 .coders{
+    float: left;
     max-width: 15%;
     border-radius: 40%;
     text-align: center;
 }
-figcaption{
+#aboutus figcaption{
     padding-left: 1.5em;
+    position: relative;
+    top: 17em;
+    left: -10em;
 }
-
+.cts, .ke,.nn{
+    margin: 0em 0em 0em 15em;
+    
+}
 /*###################### END CSS FOR ABOUT US #############################*/
 
 /*###################### START CSS FOR FOOTER #############################*/
@@ -269,7 +334,7 @@ footer{
     text-align: center;
     border-top: solid #CB3A00;
     border-bottom: solid #CB3A00;
-    color: #ffebcd;
+    color: #CB3A00;
     background-color: #FF7E4A;
     padding: .5em;
 }
@@ -288,3 +353,76 @@ footer a:hover{
 
 /*###################### END CSS FOR FOOTER #############################*/
 
+/*######################### RELISH PAGE #################################*/
+.drchase{
+    border-radius: 0.9em;
+    display: block;
+    margin: auto;
+    
+}
+#relish h3{
+    text-align: center;   
+    font-weight: bolder;
+}
+.george{
+    float: right;
+    max-width: 12%;
+    border-radius: 80%;
+}
+/*######################### END RELISH PAGE #################################*/
+
+/*######################### RESCUE PAGE #################################*/
+.butchie{
+    border-radius: 0.9em;
+    display: block;
+    margin: auto;
+}
+#rescue h3{
+    text-align: center;
+    font-weight: bolder;
+}
+.lola{
+    float: right;
+    max-width: 12%;
+    border-radius: 80%;
+}
+/*######################### END RESCUE PAGE #################################*/
+
+/*######################### REHABILITATE PAGE #################################*/
+.chrisp2{
+    border-radius: 0.9em;
+    display: block;
+    margin: auto;
+}
+#rehabilitate h3{
+    text-align: center;
+    font-weight: bolder;
+}
+.lace{
+    float: right;
+    max-width: 12%;
+    border-radius: 80%;
+}
+/*#################### START OF FORM PAGE ####################################*/
+#main{
+    background-color: cornsilk;
+}
+.contact, .choice, .rescue{
+    width: 24.5em;
+    margin: 0em auto 0em auto;
+    border: solid 2px lightblue;
+    background-color:rgba(173,216,230, 0.4);
+    box-shadow: 2px 2px 0px 1px #ffebcd;
+}
+.buttons{
+    width: 9.2em;
+    margin: 0em auto 0.6em auto;
+    text-align: center;
+}
+.mistake{
+    background-color: rgba(250, 0, 0, 0.5);
+    color: black;
+}
+#txtEmail{
+    margin: 0em 0em 0em 2.2em;
+}
