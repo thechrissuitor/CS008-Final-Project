@@ -521,7 +521,7 @@ if(!securityCheck($thisURL)){
     Yes</label>
 </p>
 
-<p class="radio <?php if ($petsERROR) print ' mistake'; ?>">
+<p class="radio <?php if ($petsERROR) print ' error'; ?>">
     <label class="radio-field">
         <input type="radio"
                id="radPets2"
@@ -534,7 +534,7 @@ if(!securityCheck($thisURL)){
 <!-- ##################### END RADIO BUTTONS ################### --> 
 
 <!-- ##################### START RADIO BUTTONS ################### --> 
-<p class="radio <?php if ($experienceERROR) print ' mistake'; ?>">Do you have experience with rescue dogs?<br/>
+<p class="radio <?php if ($experienceERROR) print ' error'; ?>">Do you have experience with rescue dogs?<br/>
     <label class="radio-field">
         <input type="radio"
                id="radExperience1"
@@ -545,7 +545,7 @@ if(!securityCheck($thisURL)){
     Yes</label>
 </p>
 
-<p class="radio <?php if ($experienceERROR) print ' mistake'; ?>">
+<p class="radio <?php if ($experienceERROR) print ' error'; ?>">
     <label class="radio-field">
         <input type="radio"
                id="radExperience2"
@@ -567,7 +567,7 @@ if(!securityCheck($thisURL)){
 <fieldset class="contact">
 <legend>Residence Information</legend>
 <!-- ##################### START CHECKBOXES ################### --> 
-            <p class="checkbox <?php if ($housingERROR) print ' mistake'; ?>">
+            <p class="checkbox <?php if ($housingERROR) print ' error'; ?>">
                 <label class="check-field">
                     <input <?php if ($house) print " checked "; ?>
                         id="chkHouse"
@@ -617,7 +617,7 @@ if(!securityCheck($thisURL)){
 <!-- ##################### END CHECKBOXES ################### -->
 
 <!-- ##################### START RADIO BUTTONS ################### --> 
-<p class="radio <?php if ($shadeERROR) print ' mistake'; ?>">Shade available?
+<p class="radio <?php if ($shadeERROR) print ' error'; ?>">Shade available?
     <label class="radio-field">
         <input type="radio"
                id="radShade1"
@@ -654,7 +654,7 @@ if(!securityCheck($thisURL)){
         >
     </p>
     <!-- ##################### START RADIO BUTTONS ################### --> 
-    <p class="radio <?php if ($fencedERROR) print ' mistake'; ?>">Fenced yard?
+    <p class="radio <?php if ($fencedERROR) print ' error'; ?>">Fenced yard?
         <label class="radio-field">
             <input type="radio"
                    id="radFenced1"
@@ -685,7 +685,7 @@ if(!securityCheck($thisURL)){
                 Breed:
             </p>
             
-            <p class="listbox <?php if ($breedERROR) print ' mistake'; ?>">
+            <p class="listbox <?php if ($breedERROR) print ' error'; ?>">
                 <select id="lstBreed" size="4"
                         name="lstBreed"
                         tabindex="440">

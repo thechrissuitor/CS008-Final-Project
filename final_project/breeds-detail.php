@@ -65,31 +65,17 @@ fclose($file);
 
     <!-- <h2>Photos</h2> -->
         <?PHP
-        print '<table>';
-        
-        $count = 2;
         
         foreach ($breedDatas as $breedData) {
-            if($count%2==0){
-                print'<tr>';
-            }
-            
-            
             if ($breedSelection == $breedData[3]) {
-                print'<td>';
                 print '<figure class ="">';
                 print '<img src=' . '"' . $breedData[1] . '"  class="" ' . "alt=" . '"'. $breedData[2] .'">';
                 print '<figcaption>' . $breedData[2] . '</figcaption>';
                 print '</figure>';
-                print'</td><br/>';
+                print'<br/>';
+            
             }
-            if ($count%2==1){
-                print'</tr>';
-            }
-            $count ++;
         }
-        print'</table>';
-
         include('footer.php');
         ?>
     </body>

@@ -9,7 +9,7 @@
         <tr>
             <td><a href="photos.php">Photos</a></td>
             <td><address>Burlington, VT 05405</address></td>
-            <td><a href="www.linkedin.com/in/christopherthomassuitor">Christopher T. Suitor</a></td>
+            <td><a href="https://www.linkedin.com/in/christopherthomassuitor/">Christopher T. Suitor</a></td>
         </tr>
         <tr>
             <td><a href="rescue.php">Rescue</a></td>

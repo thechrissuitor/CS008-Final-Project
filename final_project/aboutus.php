@@ -22,7 +22,7 @@ include ('top.php');
         family environment. At the end of his service at Big Dogs Huge Paws, 
         Christopher and his family adopted Eve, and they now live happily together.<br><br> 
         Email: <a href="mailto:csuitor@uvm.edu">csuitor@uvm.edu</a><br>
-        LinkedIn:<a href="https://www.linkedin.com/in/christopherthomassuitor/https://www.linkedin.com/in/christopherthomassuitor"> Christopher S.</a><br>
+        LinkedIn:<a href="https://www.linkedin.com/in/christopherthomassuitor"> Christopher S.</a><br>
         Facebook: <a href="https://www.facebook.com/TheChrisSuitor"> Christopher Suitor</a><br>
     </p>
     <br><br><br><br><br>

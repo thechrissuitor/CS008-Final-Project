@@ -11,16 +11,17 @@ $path_parts = pathinfo($phpSelf);
         
         <meta charset="utf-8">
         <meta name="author" content="Christopher Thomas Suitor, Nana Namiko, Kieran Edraney">
-        <meta name="description" content="Experience climate change by art, news, contests, and more">
+        <meta name="description" content="Rescue dogs!">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <link rel="stylesheet" href="../css/customfinal.css" type="text/css" media="screen">
         <link rel="icon" href="images/final_logo.png">
+        <!-- This is for the jquery slider -->
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script src="../js/jquery.flexslider.js"></script>
-
-        <script type="text/javascript">
-            var flexsliderStylesLocation = "../css/flexslider.css";
+        
+         <script type="text/javascript">
+            var flexsliderStylesLocation = "../css/flexsliderFinal.css";
             $('<link rel="stylesheet" type="text/css" href="'+flexsliderStylesLocation+'" >').appendTo("head");
             $(window).load(function() {
 
@@ -31,8 +32,7 @@ $path_parts = pathinfo($phpSelf);
                 });
 
             });
-        </script>
-
+            </script>
         
         <?php
         $debug = false;
@@ -80,7 +80,7 @@ $path_parts = pathinfo($phpSelf);
         if($path_parts['filename'] == "form"){
             print PHP_EOL . '<!-- include form libraries -->' . PHP_EOL;
             include "lib/validation-functions.php";
-            
+            include "lib/mail-message.php";
         }
         
         print PHP_EOL . '<!-- finished including libraries -->' . PHP_EOL;
@@ -93,8 +93,8 @@ $path_parts = pathinfo($phpSelf);
     print '<body id="' . $path_parts['filename'] . '">';
     
     include 'header.php';
+    /* include 'nav.php'; */
     
-   
     if($debug){
         print '<p>DEBUG MODE IS ON</p>';  
     }
