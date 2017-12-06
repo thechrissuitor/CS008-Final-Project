@@ -34,9 +34,9 @@ $lastName = "";
 
 $email = "";
 
-$pets = "";
+$pets = "Yes";
 
-$experience = "";
+$experience = "Yes";
 
 $house = false; //not checked
 
@@ -459,7 +459,7 @@ if(!securityCheck($thisURL)){
             <p>
                 <label class="required text-field" for="txtFirstName">First Name: </label>
                 <input autofocus
-                       <?php if ($firstNameERROR) print 'class="mistake"'; ?>
+                       <?php if ($firstNameERROR) print 'class="mistake problem"'; ?>
                        id="txtFirstName"
                        maxlength="45"
                        name="txtFirstName"
@@ -474,7 +474,7 @@ if(!securityCheck($thisURL)){
             <p>
                 <label class="required text-field" for="txtLastName">Last Name: </label>
                 <input 
-                       <?php if ($lastNameERROR) print 'class="mistake"'; ?>
+                       <?php if ($lastNameERROR) print 'class="mistake problem"'; ?>
                        id="txtLastName"
                        maxlength="45"
                        name="txtLastName"
@@ -489,7 +489,7 @@ if(!securityCheck($thisURL)){
             <p>
                 <label class ="required text-field" for="txtEmail">Email: </label>
                     <input
-                        <?php if ($emailERROR) print 'class="mistake"'; ?>
+                        <?php if ($emailERROR) print 'class="mistake problem"'; ?>
                         id="txtEmail"
                         maxlength="45"
                         name="txtEmail"
@@ -510,7 +510,7 @@ if(!securityCheck($thisURL)){
 <fieldset class="contact">
             <legend>Join the Cause</legend>
 <!-- ##################### START RADIO BUTTONS ################### --> 
-<p class="radio <?php if ($petsERROR) print ' mistake'; ?>">Do you already have pets?<br/>
+<p class="radio <?php if ($petsERROR) print ' error'; ?>">Do you already have pets?<br/>
     <label class="radio-field">
         <input type="radio"
                id="radPets1"
@@ -642,7 +642,7 @@ if(!securityCheck($thisURL)){
 
     <label class="text-field" for="txtShadeType">Type?</label>
         <input
-               <?php if ($shadeTypeERROR) print 'class="mistake"'; ?>
+               <?php if ($shadeTypeERROR) print 'class=" problem"'; ?>
                id="txtShadeType"
                maxlength="90"
                name="txtShadeType"
@@ -711,7 +711,7 @@ if(!securityCheck($thisURL)){
 <!-- ##################### START TEXTAREA ################### -->
             <p class ="textarea">
                 <label for="txtComments">Additional Comments:</label><br/>
-                <textarea <?php if ($commentsERROR) print 'class="mistake"'; ?>
+                <textarea <?php if ($commentsERROR) print 'class="mistake problem"'; ?>
                     id="txtComments"
                     name="txtComments"
                     onfocus="this.select()"

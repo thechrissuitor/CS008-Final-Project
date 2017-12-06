@@ -4,7 +4,7 @@
         <tr>
             <td><a href="index.php">Home</a></td>
             <td><address>University of Vermont:</address></td>
-            <td>Find Us:</td>
+            <td class="here">Find Us:</td> 
         </tr>
         <tr>
             <td><a href="photos.php">Photos</a></td>
@@ -27,7 +27,7 @@
             <td><a href="relish.php">Relish</a></td>
         </tr>
         <tr>
-            <td><a href="form.php">Form</a></td>
+            <td><a href="form.php">Adopt a Rescue</a></td>
         </tr>
         <tr>
             <td><a href="thankyou.php">Thank You</a></td>

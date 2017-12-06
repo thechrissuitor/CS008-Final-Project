@@ -68,10 +68,12 @@ fclose($file);
         
         foreach ($breedDatas as $breedData) {
             if ($breedSelection == $breedData[3]) {
+                print '<a href ="form.php">';
                 print '<figure class ="">';
-                print '<img src=' . '"' . $breedData[1] . '"  class="" ' . "alt=" . '"'. $breedData[2] .'">';
+                print '<img src=' . '"' . $breedData[1] . '"  class="dogs" ' . "alt=" . '"'. $breedData[2] .'">';
                 print '<figcaption>' . $breedData[2] . '</figcaption>';
                 print '</figure>';
+                print '</a>';
                 print'<br/>';
             
             }

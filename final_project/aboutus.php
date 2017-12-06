@@ -2,13 +2,13 @@
 include ('top.php');
 ?>
 <article class="aboutus">
-<h2 class="abt">About Us</h2>
+    <h2 class="abt">About Us</h2>
 
 
     <!-- Information about Christopher Suitor -->
     <figure>
-    <img class="coders" alt="" src="../final_project/images/cts.jpg">
-    <figcaption class="abtfig">Christopher T. Suitor <br> Project Manager </figcaption>
+        <img class="coders" alt="" src="../final_project/images/cts.jpg">
+        <figcaption class="abtfig">Christopher T. Suitor <br> Project Manager </figcaption>
     </figure>
     <p class="cts">
         Christopher Thomas Suitor is the project manager for this website. He is 
@@ -32,8 +32,8 @@ include ('top.php');
 
     <!-- Information about Keiran Edraney -->
     <figure>
-    <img class="coders" alt="" src="../final_project/images/ke.jpg"> 
-    <figcaption class="abtfig">Keiran Edraney <br>Project Quality Assurer</figcaption>
+        <img class="coders" alt="" src="../final_project/images/ke.jpg"> 
+        <figcaption class="abtfig">Keiran Edraney <br>Project Quality Assurer</figcaption>
     </figure>
     <p class="ke">
         Keiran Edraney is the project quality assurer of this website. He is a college
@@ -53,8 +53,8 @@ include ('top.php');
 
     <!-- Information about Nana Nimako -->
     <figure>
-    <img class="coders" alt="" src="../final_project/images/nn.jpg">
-    <figcaption class="abtfig">Nana Nimako <br> Lead Programmer</figcaption>
+        <img class="coders" alt="" src="../final_project/images/nn.jpg">
+        <figcaption class="abtfig">Nana Nimako <br> Lead Programmer</figcaption>
     </figure>
     <p class="nn">
         Nana is the lead developer of this project. He is responsible for most of 
@@ -62,7 +62,7 @@ include ('top.php');
         most of his time having fun with his friends as well. And also a great soccer
         player. But never underestimate his musical skills too.
         <br>
-        
+
         Nana was born and raised in Ghana for fifteen years and moved to New York 
         when he was sixteen. He's a college freshman at the University of Vermont, 
         he's studying to become a computer scientist and has aspirations of creating

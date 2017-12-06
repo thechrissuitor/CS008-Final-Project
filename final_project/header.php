@@ -11,7 +11,7 @@
             <a href="rescue.php">Rescue</a>
             <a href="rehabilitate.php">Rehabilitate</a>
             <a href="relish.php">Relish</a>
-            <a href="form.php">Form</a>
+            <a href="form.php">Adopt a Rescue</a>
             <a href="thankyou.php">Thank You</a>
             <a href="aboutus.php">About Us</a>
         </nav>

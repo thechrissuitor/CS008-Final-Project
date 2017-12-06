@@ -32,36 +32,33 @@ include ('top.php');
 
 <table id = info>
     <tbody class="simple">
-        <tr>
+        <tr class="puppy">
             <td><a href="rescue.php"><img class="smallround" alt="" src="images/round1.JPG"></a></td>
-            <td><a href="rehabilitate.php"> <img class="smallround" alt="" src="images/round2.jpeg"></a></td>
+            <td class="middle"><a href="rehabilitate.php"> <img class="smallround" alt="" src="images/round2.jpeg"></a></td>
             <td><a href="relish.php"><img class="smallround" alt="" src="images/round3.jpg"></a></td>
         </tr>
 
         <tr>
             <td class="topic"><h2>Rescue</h2></td>
-            <td class="topic"><h2>Rehabilitation</h2></td>
+            <td class="topic middle"><h2>Rehabilitation</h2></td>
             <td class="topic"><h2>Relish</h2></td>
         </tr>
 
         <tr>
-            <td><p>Click on the small rounded image to learn more about the ways of rescuing dogs
+            <td><p>Check out the Rescue page to see the effort that goes into rescuing dogs.
+                    The heart and love that is put into saving the lives of these dogs.
+                    <br/>P.S. Click on the cute dog to take you right there.
                 </p>
             </td>
-            <td>
-                <p>Click on the small rounded image to learn more about rehabilitating dogs damaged dogs 
-                    of the world.
-                    Check out the rehab page in order to see the process of rehabilitation 
-                    that the dogs go through.For instance the type of drugs they are given,
-                    Activities and various plans which are put in place for these saved 
-                    dogs.</p>
+            <td class="middle">
+                <p>Check out the Rehab page in order to see the process of rehabilitation 
+                    that the dogs go through.<br/>P.S. Click on the cute dog to take you right there.</p>
             </td>
             <td>
-                <p>Click on the small rounded image to learn about how your love care change the world 
-                    for a rescued dog.See our new home tab to find out what it’s been 
+                <p>Your love can change the world 
+                    for a rescued dog.See our New Home tab to find out what it’s been 
                     like for current and past families that have adopted a rescue dog. 
-                    Hear heartwarming testimonials about how the dog grew because of 
-                    the family, and how the family grew because of the dog.</p>
+                    <br/>P.S. Click on the cute dog to take you right there.</p>
             </td>
         </tr>
     </tbody>

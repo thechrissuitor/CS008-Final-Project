@@ -52,7 +52,7 @@ include ('top.php');
     them. The events you’ve endured are harrowing, and to think that you all 
     came out on top of it is inspiring to us all.</p><br><br>
 <figure>
-    <img class="jon" alt="" src="images/jon.jpg">
+    <img class="jon" alt="" src="images/knD.jpg">
 </figure>
 <p>
     Christopher T. Suitor: “A huge thank you goes to Ms. Jeanne. My love for 
