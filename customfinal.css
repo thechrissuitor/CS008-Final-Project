@@ -19,6 +19,7 @@ h2{
     text-align: center;
     margin: 0em auto 1em auto;
     text-decoration: underline;
+    font-family: 'Cinzel Decorative', cursive;
     font-size: 26pt;
 }
 /*###################### END BACKGROUND STUFF #############################*/
@@ -54,6 +55,7 @@ header h1{
     margin-top: -0.75em;
     margin-bottom: .3em;
     text-align: center;
+    font-family: 'Raleway', Times New Roman;
     font-size: 3.5em;
     padding: 0.4em 0em 0.4em 0em;
     background-color: #0666B0;
@@ -83,7 +85,9 @@ header h1{
     display: block;
     border-radius: 0.4em;
 }
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -125,7 +129,7 @@ header{
     background-color: #0666B0;
 }
 .logo{
-        margin: auto 20em auto 27em;
+        margin: auto 20% auto 32%;
 }
 .dropdown-content a:hover{
     transform: scale(1.2);
@@ -135,11 +139,35 @@ header{
 /*###################### END CSS FOR HEADER #############################*/
 
 /*###################### START MEDIA QUERY STUFF ##########################*/
-
+/*
+@media screen and (max-width: 4000px){
+    .logo{
+        margin: auto 20em auto 100em;
+        max-width: 50%;
+    }
+}
+@media screen and (max-width: 3000px){
+    .logo{
+        margin: auto 20em auto 50em;
+        max-width: 50%;
+    }
+}
+@media screen and (max-width: 2000px){
+    .logo{
+        margin: auto 20em auto 27em;
+        max-width: 50%;
+    }
+}
 @media screen and (max-width: 1900px){
     .logo{
         margin: -6.9em 20em auto 20em;
         max-width: 50%;
+    }
+}
+@media screen and (max-width: 1860px){
+    .logo{
+        margin: auto 20em auto 24em;
+        max-width: 45%;
     }
 }
 @media screen and (max-width: 1820px){
@@ -148,9 +176,9 @@ header{
         max-width: 45%;
     }
 }
-@media screen and (max-width: 1860px){
+@media screen and (max-width: 1536px){
     .logo{
-        margin: auto 20em auto 24em;
+        margin: auto 20em auto 20em;
         max-width: 45%;
     }
 }
@@ -202,6 +230,7 @@ header{
         max-width: 35%;
     }   
 }
+*/
 /*###################### END MEDIA QUERY STUFF ##########################*/
 
 /*###################### START HOME #############################*/
@@ -225,13 +254,12 @@ header{
     margin: 1.2em;
 }
 #photos tbody img{
-    border-radius: 70%;
+    border-radius: 10%;
+    margin: 5px 5px 0px 5px;
 }
 .simple td{
-    border-right: solid 2px #53525A;
-    text-align: center;
-    width: 500px;
-    
+    width: 20%;
+    padding: 0% 2% 1% 2.1%;
 }
 .smallround{
     border-radius: 45%;
@@ -239,7 +267,13 @@ header{
 .smallround:hover{
     transform: scale(1.2)
 }
-
+.middle{
+    border-right: solid 2px #ff4d06;
+    border-left: solid 2px #ff4d06;
+}
+.puppy{
+    text-align: center;
+}
 
 /*###################### END HOME #############################*/
 
@@ -262,27 +296,27 @@ header{
     text-align: center;
     margin: auto;
     background-color: cornsilk;
+    width: 60%;
+    padding: 1% 2% 1% 1%;
 }
 #photos figcaption{
     border-top: solid #CB3A00;
-    padding: 20px;
+    padding: 5%;
     margin: auto;
     text-align: center;
     color: #CB3A00;
 }
 #breeds-detail figcaption{
     border-top: solid #CB3A00;
-    padding: 20px;
+    padding: 1%;
     margin: auto;
     text-align: center;
     font-size: 32pt;
     color: #CB3A00;
 }
-#photos table img{
-    padding: 1.5em;
-}
-#breeds-detail table img{
-    padding: 1.5em;
+#breeds-detail .dogs{
+    padding: 1%;
+    max-width: 100%;
 }
 #photos table{
     margin: auto;
@@ -291,13 +325,18 @@ header{
     max-width: 70%;
     margin: auto;
 }
-
+#breeds-detail a{
+    text-decoration: none;
+}
 .dropdown #menuicon{
     float: left;
     cursor: pointer;
-    padding: 1.9em 1em .7em 1.5em;
+    padding: 1.9% 1% .85% 1.5%;
     border-right: solid #EE6F2D;
     border-bottom: solid #EE6F2D;
+}
+#menuicon:focus{
+    
 }
 /*###################### END CSS FOR PHOTOS #############################*/
 
@@ -309,15 +348,13 @@ header{
 }
 .coders{
     float: left;
-    max-width: 15%;
+    max-width: 100%;
     border-radius: 40%;
-    text-align: center;
 }
 #aboutus figcaption{
-    padding-left: 1.5em;
     position: relative;
     top: 17em;
-    left: -10em;
+    left: -11em;
 }
 .cts, .ke,.nn{
     margin: 0em 0em 0em 15em;
@@ -350,6 +387,10 @@ footer a:hover{
     color: #60A7DD;
     background-color: #0666B0;
 }
+address{
+    margin: 0em 0em 0em 5.2em;
+    color: #CB3A00;
+}
 
 /*###################### END CSS FOR FOOTER #############################*/
 
@@ -357,8 +398,7 @@ footer a:hover{
 .drchase{
     border-radius: 0.9em;
     display: block;
-    margin: auto;
-    
+    margin: auto; 
 }
 #relish h3{
     text-align: center;   
@@ -366,8 +406,13 @@ footer a:hover{
 }
 .george{
     float: right;
-    max-width: 12%;
+    max-width: 100%;
     border-radius: 80%;
+}
+.here{
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: window;
 }
 /*######################### END RELISH PAGE #################################*/
 
@@ -383,7 +428,7 @@ footer a:hover{
 }
 .lola{
     float: right;
-    max-width: 12%;
+    max-width: 100%;
     border-radius: 80%;
 }
 /*######################### END RESCUE PAGE #################################*/
@@ -400,7 +445,7 @@ footer a:hover{
 }
 .lace{
     float: right;
-    max-width: 12%;
+    max-width: 100%;
     border-radius: 80%;
 }
 /*#################### START OF FORM PAGE ####################################*/
@@ -408,14 +453,15 @@ footer a:hover{
     background-color: cornsilk;
 }
 .contact, .choice, .rescue{
-    width: 24.5em;
-    margin: 0em auto 0em auto;
+    width: 50%;
+    margin: 0% auto 0% auto;
+    padding: 4%;
     border: solid 2px lightblue;
     background-color:rgba(173,216,230, 0.4);
     box-shadow: 2px 2px 0px 1px #ffebcd;
 }
 .buttons{
-    width: 9.2em;
+    width: 8%;
     margin: 0em auto 0.6em auto;
     text-align: center;
 }
@@ -423,6 +469,15 @@ footer a:hover{
     background-color: rgba(250, 0, 0, 0.5);
     color: black;
 }
+.error{
+    color: red;
+}
+problem{
+    color: red;
+}
 #txtEmail{
     margin: 0em 0em 0em 2.2em;
+}
+#form label{
+    width: 60%;
 }
