@@ -7,6 +7,7 @@ include('top.php');
         <img class="butchie" alt="" src="images/butchie.jpeg">
     </figure>
     <h3>#SOS!</h3>
+    <h2>The Abuse and Rescue of Dogs</h2>
     <p>
         To be a part of the secret service requires at least a bachelors degree 
         to apply. Applicants need to pass an intensive background check in order
@@ -17,18 +18,21 @@ include('top.php');
         influential, but that is beyond the scope of this website) in the past 
         century. To be willing to take a bullet for another person, given up who
         knows how many years of life in order to allow another to keep breathing
-        for an undisclosed amount of time more. That kind of rigor is beyond what
-        <figure>
-        <img class="lola" alt="" src="images/lola.jpeg">
-    </figure>
-        Big Dogs Huge Paws can provide, because these are not the leaders of 
+        for an undisclosed amount of time more. That kind of rigor is beyond what</p>
+    <aside class='blockQuote'>"Starvation is far too commonplace for these dogs"</aside>
+        
+    <p>Big Dogs Huge Paws can provide, because these are not the leaders of 
         millions, but the abused of the people who could not handle the 
         responsibility of putting the life of another first. That’s where
     
     
         Big Dogs Huge Paws comes in.The heroes who call in Big Dogs Huge Paws 
         to help these innocent dogs are not highly trained covert operatives
-        who work for years to hone their dog locating abilities. They are the 
+        who work for years to hone their dog locating abilities.</p>
+    <figure>
+        <img class="lola" alt="" src="images/lola.jpeg">
+    </figure>
+    <p>They are the 
         citizens who find a stray dog in the alley as they are driving to work
         and who get to work late because they stopped to make sure the dog was 
         given to the right people. They are the scholars who report suspected 
@@ -44,7 +48,7 @@ include('top.php');
         fight, it being the only thing left after they have had their compassion
         and love for man stolen, waiting to be nursed back to health. Neglect, 
         where the dog is simply left alone with no support from a loving owner, 
-        their own solitary confinement. Big Dogs Huge Paws does not have the 
+        their own solitary confinement.Big Dogs Huge Paws does not have the 
         capital required to raid the streets of the world and make sure that all
         dogs are given access to the humane resources they provide, so they have
         to function off the good will of others and their proactiveness in 

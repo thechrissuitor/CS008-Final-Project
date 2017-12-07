@@ -39,9 +39,9 @@ include ('top.php');
         </tr>
 
         <tr>
-            <td class="topic"><h2>Rescue</h2></td>
-            <td class="topic middle"><h2>Rehabilitation</h2></td>
-            <td class="topic"><h2>Relish</h2></td>
+            <td class="topic"><a href="rescue.php"><h2>Rescue</h2></a></td>
+            <td class="topic middle"><a href="rehabilitate.php"><h2>Rehabilitation</h2></a></td>
+            <td class="topic"><a href="relish.php"><h2>Relish</h2></a></td>
         </tr>
 
         <tr>
@@ -69,6 +69,7 @@ include ('top.php');
         <figcaption> Gunner </figcaption>
     </figure>
 
+<h2>Why You Should Care</h2>
     <p>
         Dogs today are beaten, chained, and starved. The amount of abuse, between 
         neglectful and abusive owners all the way up through dog fighting rings, 
@@ -85,16 +86,12 @@ include ('top.php');
         To a recovering rescued dog, you love will be the most important thing 
         in their life, and, in return, the dog shall love you unconditionally. 
         Please browse our website to get an idea of what these dogs go through.<br>
-        <br/>
-        See our abuse page in order to get an idea about specifically what trauma
-        these dogs endure. The idea here isn’t to make you sad, but more to give 
-        you the strength to adopt a rescue dog instead of a “clean” dog, and the 
-        evidence to back up your decision and reaffirm that you’re doing the right
-        thing.</p>
+        </p>
     <figure class="ollie">
         <img  class="ollie_circle" alt="" src="images/sad10.JPG">
         <figcaption> Ollie </figcaption>
     </figure>
+    <h2>Our Partner</h2>
     <p class="pHome">
         We’ll bring you as close to the “Big Dogs Huge Paws” non-profit organization as 
         we can, so you can see all the amazing things that they do, from training their 
@@ -102,18 +99,25 @@ include ('top.php');
         and stores stocked with high quality food and supplies 
         in order to give both themselves and nearby families the access to proper 
         equipment they need to give
-        these dogs the life they have always deserved.<br/><br/>
-
-        Check out our photos tab to see a plethora of photos. Here you can actually 
+        these dogs the life they have always deserved.</p>
+    <h2>Our Pages</h2>
+    <p>
+        Check out our <a href="photos.php">Photos tab</a> to see a plethora of photos. Here you can actually 
         experience the heartbreak of these dogs after their abuse, the embodiment of 
         perseverance and persistence of their recovery, and the unequalled joy of their
         new home/family. More than that, you can experience this across breeds of dogs,
-        letting you connect with the breed that you love the most.<br><br>
-        The form page is where you can let us know what we did well, and what we need to 
+        letting you connect with the breed that you love the most.<br/><br/>
+        See our <a href="rescue.php">Rescue Page</a> in order to get an idea about specifically what trauma
+        these dogs endure. The idea here isn’t to make you sad, but more to give 
+        you the strength to adopt a rescue dog instead of a “clean” dog, and the 
+        evidence to back up your decision and reaffirm that you’re doing the right
+        thing.<br/><br/>
+        The <a href="form.php">Adopt a Rescue</a> is where you can place a request to adopt one of our dogs.
+        We can't guarantee the exact dog you'll get, but you can choose by bree. Also, you can let us know what we did well, and what we need to 
         improve upon in our website. It also lets us get a chance to know about your relationship with dogs.
         Whether you have one or not and even give some ideas you as an individual
-        have on the rescuing of dogs. And even how to make a wonderful home for them.<br><br>
-        The about us page is the page that will give the user a slight knowledge about who theses
+        have on the rescuing of dogs. And even how to make a wonderful home for them.<br/><br/>
+        The <a href="aboutus.php">About Us</a> page is the page that will give the user a slight knowledge about who theses
     website developers are. Their talents, aspirations and some of their inspiration to accomplish this 
     goal.</p>
 

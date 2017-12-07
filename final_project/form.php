@@ -48,13 +48,13 @@ $owner = false; //not checked
 
 $rent = false; //not checked
 
-$shade = "";
+$shade = "Yes";
 
 $shadeType = "";
 
-$fenced = "";
+$fenced = "Yes";
 
-$breed = "None";
+$breed = "Dane";
 
 $comments = "";
 
@@ -132,10 +132,10 @@ if(!securityCheck($thisURL)){
     $email = filter_var($_POST["txtEmail"], FILTER_SANITIZE_EMAIL);
     $dataRecord[] = $email;
     
-    $pets = filter_var($_POST["radPets"], FILTER_SANITIZE_EMAIL);
+    $pets = htmlentities($_POST["radPets"], ENT_QUOTES, "UTF-8");
     $dataRecord[] = $pets;
     
-    $experience = filter_var($_POST["radExperience"], FILTER_SANITIZE_EMAIL);
+    $experience = htmlentities($_POST["radExperience"], ENT_QUOTES, "UTF-8");
     $dataRecord[] = $experience;
     
     if(isset($_POST["chkHouse"])) {
@@ -178,13 +178,13 @@ if(!securityCheck($thisURL)){
     }
     $dataRecord[] = $rent;
     
-    $shade = filter_var($_POST["radShade"], FILTER_SANITIZE_EMAIL);
+    $shade = htmlentities($_POST["radShade"], ENT_QUOTES, "UTF-8");
     $dataRecord[] = $shade;
-    
+   
     $shadeType = htmlentities($_POST["txtShadeType"], ENT_QUOTES, "UTF-8");
     $dataRecord[] = $shadeType;
     
-    $fenced = filter_var($_POST["radFenced"], FILTER_SANITIZE_EMAIL);
+    $fenced = htmlentities($_POST["radFenced"], ENT_QUOTES, "UTF-8");
     $dataRecord[] = $fenced;
     
     $breed = htmlentities($_POST["lstBreed"], ENT_QUOTES, "UTF-8");

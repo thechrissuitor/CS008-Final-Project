@@ -12,7 +12,9 @@ include('top.php');
         will lead to good fortune and a good life, and ill-intentioned actions lead 
         to long-term suffering and poor lives in the future on actor. Karma is a 
         force of justice – rewarding the well-meaning agents in the world with a
-        better time here, like a promotion to the good employees. Whether or not
+        better time here, like a promotion to the good employees.</p>
+    <aside class="blockQuote">"It is up to all of us to... give these dogs that which they so deserve."</aside>
+    <p>Whether or not
         karma exists, it is painfully clear that these dogs need something good 
         to come into their life, because it is our duty to try and make the world
         as fair as possible, and it would be neither fair nor just if these dogs 

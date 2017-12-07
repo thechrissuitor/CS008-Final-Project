@@ -481,3 +481,17 @@ problem{
 #form label{
     width: 60%;
 }
+/*######################### END REHABILITATE PAGE #################################*/
+
+/*######################### START GENERAL STUFF #################################*/
+.blockQuote{
+    border: 3px solid black;
+    border-radius: 25px;
+    border-color: #FF4D06;
+    font-size: 18pt;
+    font-weight: bold;
+    float: left;
+    max-width: 24%;
+    padding: 1em;
+    margin: 1em;
+}

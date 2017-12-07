@@ -12,7 +12,9 @@ include('top.php')
     a long, hard, painful road. They had been neglected, they had been starved,
     they had been chained, and worse. Some had to endure the horrors of dog fights, 
     being forced to fight each other for the exchange of dirty money, of which was
-    tainted with the blood of innocence. Some were forced to breed non-stop in 
+    tainted with the blood of innocence.</p>
+<aside class="blockQuote">"the only way to get a dog to love again is to love them right back"</aside> 
+<p>Some were forced to breed non-stop in 
     puppy mills, where their children were taken from them and sold for a petty 
     profit, just so they could repeat the whole process again, mother and father
     never seeing their children as an unseen stranger took them away to an unvetted
@@ -22,11 +24,11 @@ include('top.php')
     back from, in many cases and situations, the brink of death, back to a world
     in which they can know what it’s like for an owner to truly love them. This 
     is done through positive reinforcement, because Big Dogs Huge Paws believes 
-    that the only way to get a dog to love again is to love them right back.
-    <figure>
+    that the only way to get a dog to love again is to love them right back.</p> 
+<figure>
             <img class="lace" alt="" src="images/Lace.png">
     </figure>
-    “Big Dogs Huge Paws supports use of treats, praise, and redirection of 
+<p>“Big Dogs Huge Paws supports use of treats, praise, and redirection of 
     unwanted behaviors in order to aid in teaching your giant breed dog to 
     become a good canine citizen.” This commitment to making these dogs better
     through positive reinforcement is what make Big Dogs Huge Paws such a 

@@ -33,7 +33,7 @@ include ('top.php');
     <!-- Information about Keiran Edraney -->
     <figure>
         <img class="coders" alt="" src="../final_project/images/ke.jpg"> 
-        <figcaption class="abtfig">Keiran Edraney <br>Project Quality Assurer</figcaption>
+        <figcaption class="abtfig">Keiran Edraney <br>Content Developer</figcaption>
     </figure>
     <p class="ke">
         Keiran Edraney is the project quality assurer of this website. He is a college
