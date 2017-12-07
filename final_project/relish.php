@@ -6,7 +6,7 @@ include('top.php');
     <figure>
         <img class="drchase" alt="" src="images/chase.jpeg">
     </figure>
-    <h4>#LoveOurSweeties!!</h4>
+    <h3>#LoveOurSweeties!!</h3>
     <p>
         Some people believe in karma – a force where your good-intentioned actions 
         will lead to good fortune and a good life, and ill-intentioned actions lead 
