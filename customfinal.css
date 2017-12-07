@@ -57,7 +57,7 @@ header h1{
     text-align: center;
     font-family: 'Raleway', Times New Roman;
     font-size: 3.5em;
-    padding: 0.4em 0em 0.4em 0em;
+    padding: 0.6em 0em 0.4em 0em;
     background-color: #0666B0;
     color: #60A7DD;
     border-top: solid;
@@ -374,6 +374,7 @@ footer{
     color: #CB3A00;
     background-color: #FF7E4A;
     padding: .5em;
+    margin-top: 2em;
 }
 #footer{
     text-align: center;
@@ -469,10 +470,7 @@ address{
     background-color: rgba(250, 0, 0, 0.5);
     color: black;
 }
-.error{
-    color: red;
-}
-problem{
+.problem {
     color: red;
 }
 #txtEmail{
