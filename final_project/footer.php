@@ -25,16 +25,24 @@
         </tr>
         <tr>
             <td><a href="relish.php">Relish</a></td>
+            <td></td>
+            <td></td>
         </tr>
         <tr>
             <td><a href="form.php">Adopt a Rescue</a></td>
+            <td></td>
+            <td></td>
         </tr>
         <tr>
             <td><a href="thankyou.php">Thank You</a></td>
+            <td></td>
+            <td></td>
         </tr>
         
         <tr>
             <td><a href="aboutus.php">About Us</a></td>
+            <td></td>
+            <td></td>
         </tr>
     </table>
    

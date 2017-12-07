@@ -16,8 +16,10 @@
             <a href="aboutus.php">About Us</a>
         </nav>
     </div>
-     <img class="logo" alt="" src="images/final_logo.png">
+    <a href="index.php">
+        <img class="logo" alt="" src="images/final_logo.png"></a>
       <h1>Save Our Sweeties</h1>
+      
 </header>
 
 <!-- ######################     End Page header   ############################## -->

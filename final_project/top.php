@@ -17,7 +17,7 @@ $path_parts = pathinfo($phpSelf);
         <link rel="stylesheet" href="../css/customfinal.css" type="text/css" media="screen">
         <link rel="icon" href="images/final_logo.png">
         <!-- This is for the jquery slider -->
-        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script src="../js/jquery.flexslider.js"></script>
         
          <script type="text/javascript">

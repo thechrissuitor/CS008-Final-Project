@@ -69,7 +69,7 @@ include ('top.php');
         <figcaption> Gunner </figcaption>
     </figure>
 
-<h2>Why You Should Care</h2>
+<h3>Why You Should Care</h3>
     <p>
         Dogs today are beaten, chained, and starved. The amount of abuse, between 
         neglectful and abusive owners all the way up through dog fighting rings, 
@@ -91,7 +91,7 @@ include ('top.php');
         <img  class="ollie_circle" alt="" src="images/sad10.JPG">
         <figcaption> Ollie </figcaption>
     </figure>
-    <h2>Our Partner</h2>
+    <h3>Our Partner</h3>
     <p class="pHome">
         We’ll bring you as close to the “Big Dogs Huge Paws” non-profit organization as 
         we can, so you can see all the amazing things that they do, from training their 
@@ -100,7 +100,7 @@ include ('top.php');
         in order to give both themselves and nearby families the access to proper 
         equipment they need to give
         these dogs the life they have always deserved.</p>
-    <h2>Our Pages</h2>
+    <h3>Our Pages</h3>
     <p>
         Check out our <a href="photos.php">Photos tab</a> to see a plethora of photos. Here you can actually 
         experience the heartbreak of these dogs after their abuse, the embodiment of 
