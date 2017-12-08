@@ -2,11 +2,11 @@
 include('top.php')
 ?>
 <article>
-<h2>Rehabilitate</h2>
 <figure>
     <img class="chrisp2" alt="" src="images/chrisp2.jpg">
 </figure>
 <h3>#HealOurSweeties</h3>
+<h2>Rehabilitate</h2>
 <p>
     The world had been stolen from these dogs. They life up this point had been 
     a long, hard, painful road. They had been neglected, they had been starved,

@@ -2,11 +2,11 @@
 include('top.php');
 ?>
 <article>
-    <h2>Relish</h2>
     <figure>
         <img class="drchase" alt="" src="images/chase.jpeg">
     </figure>
     <h3>#LoveOurSweeties!!</h3>
+    <h2>Relish</h2>
     <p>
         Some people believe in karma – a force where your good-intentioned actions 
         will lead to good fortune and a good life, and ill-intentioned actions lead 

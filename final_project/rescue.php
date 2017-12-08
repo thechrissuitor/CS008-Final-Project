@@ -2,12 +2,11 @@
 include('top.php');
 ?>
 <article>
-    <h2>Rescue</h2>
     <figure>
         <img class="butchie" alt="" src="images/butchie.jpeg">
     </figure>
     <h3>#SOS!</h3>
-    <h2>The Abuse and Rescue of Dogs</h2>
+    <h2>Rescue</h2>
     <p>
         To be a part of the secret service requires at least a bachelors degree 
         to apply. Applicants need to pass an intensive background check in order
